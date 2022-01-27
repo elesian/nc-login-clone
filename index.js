@@ -21,3 +21,30 @@ function darkModeToggle() {
   document.getElementById('password-label').style.color = 'black';
   return;
 }
+
+let emailInput = document.getElementById('email-id');
+const emailValidate = (event) => {
+  console.log(event.target.value);
+  const emailInput = event.target.value;
+  const regex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (regex.test(emailInput) === true) {
+    console.log('true');
+  } else console.log('false');
+};
+
+emailInput.addEventListener('change', emailValidate);
+
+let passInput = document.getElementById('password-id');
+const passwordValidate = (event) => {};
+
+passInput.addEventListener('change', passwordValidate);
+
+//   const regex =
+//     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   if (input.value.match(regex) === true) {
+//     console.log('match');
+//     return;
+//   } else {
+//     console.log('no match');
+//     return;s

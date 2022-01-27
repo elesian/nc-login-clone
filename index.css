@@ -34,13 +34,13 @@ body {
   text-align: left;
 }
 
-#password {
+#password-id {
   font-family: Arial;
   font-size: 25px;
   padding-left: 10px;
 }
 
-#email {
+#email-id {
   font-family: Arial;
   font-size: 25px;
   padding-left: 10px;
