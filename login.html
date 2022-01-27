@@ -12,6 +12,10 @@
   </head>
   <header>
     <img id="nc-logo" src="./NCLogo.jpeg" />
+    <label class="switch">
+      <input type="checkbox" id="dark-mode" onclick="darkModeToggle()" />
+      <span class="slider round"></span>
+    </label>
   </header>
 
   <body>
@@ -24,13 +28,15 @@
         <div>
           <form action="./landingPage.html" id="to-landing-page">
             <div>
-              <label for="email"  class="form">Email address: </label>
+              <label for="email" class="form" id="email-label"
+                >Email address:
+              </label>
               <input name="email" type="email" class="form" id="email" />
               <p>Please provide a valid email address</p>
             </div>
 
             <div>
-              <label for="password" class="form"
+              <label for="password" class="form" id="password-label"
                 >Password:
               </label>
               <input
