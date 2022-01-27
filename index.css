@@ -32,12 +32,14 @@
 
 #password {
   font-family: Arial;
-  font-size: 30px;
+  font-size: 25px;
+  padding-left: 10px;
 }
 
 #email {
   font-family: Arial;
-  font-size: 30px;
+  font-size: 25px;
+  padding-left: 10px;
 }
 
 #button {
@@ -54,7 +56,7 @@
   height: 50px;
   font-family: Arial;
   border-radius: 10px;
-  text-align: center;
+  font-size: 30px;
 }
 
 p {
@@ -62,6 +64,7 @@ p {
   text-align: left;
   color: red;
   font-size: 20px;
+  text-align: left;
 }
 
 #rr {
