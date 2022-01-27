@@ -3,6 +3,8 @@
 const tick = '&#10004';
 const cross = '&#10060';
 let toggle = false;
+let validEmail = false;
+let validPassword = false;
 
 function darkModeToggle() {
   if (toggle === false) {
@@ -23,20 +25,46 @@ function darkModeToggle() {
 }
 
 let emailInput = document.getElementById('email-id');
-const emailValidate = (event) => {
+
+const emailValidate = (event, validEmail) => {
   console.log(event.target.value);
   const emailInput = event.target.value;
   const regex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (regex.test(emailInput) === true) {
-    console.log('true');
-  } else console.log('false');
+    validEmail = true;
+    document.getElementById('email-valid').innerText =
+      'Please provide a valid email address ✔';
+    document.getElementById('email-valid').style.color = 'green';
+  } else {
+    validPassword = false;
+    document.getElementById('email-valid').innerText =
+      'Please provide a valid email address ✘';
+    document.getElementById('email-valid').style.color = 'red';
+  }
 };
 
 emailInput.addEventListener('change', emailValidate);
 
 let passInput = document.getElementById('password-id');
-const passwordValidate = (event) => {};
+
+const passwordValidate = (event, validPassword) => {
+  const passwordInput = event.target.value;
+  const regex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  if (regex.test(passwordInput) === true) {
+    validPassword = true;
+    document.getElementById('password-valid').innerText =
+      'Please provide a valid password ✔';
+    document.getElementById('password-valid').style.color = 'green';
+  } else {
+    validPassword = false;
+    document.getElementById('password-valid').innerText =
+      'Please provide a valid password ✘';
+    document.getElementById('password-valid').style.color = 'red';
+    console.log('false');
+  }
+};
 
 passInput.addEventListener('change', passwordValidate);
 
