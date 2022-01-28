@@ -26,7 +26,7 @@
         </div>
 
         <div>
-          <form action="./landingPage.html" id="to-landing-page">
+          <form action="./landingPage.html" id="to-landing-page" method="GET">
             <div>
               <label for="email" class="form" id="email-label"
                 >Email address:
@@ -41,6 +41,7 @@
               <p id="email-valid">Please provide a valid email address</p>
             </div>
 
+            <!-- /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/ -->
             <div>
               <label for="password" class="form" id="password-label"
                 >Password:
@@ -49,9 +50,11 @@
                 name="password"
                 type="password"
                 id="password-id"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                 class="form"
                 required
               />
+
               <p id="password-valid">Please provide a valid password</p>
             </div>
             <div>
