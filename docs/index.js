@@ -70,7 +70,7 @@ const emailValidate = (event) => {
   }
 };
 
-emailInput.addEventListener('change', emailValidate);
+emailInput.addEventListener('input', emailValidate);
 
 const passwordValidate = (event) => {
   const passwordInput = event.target.value;
@@ -92,4 +92,4 @@ const passwordValidate = (event) => {
   }
 };
 
-passInput.addEventListener('change', passwordValidate);
+passInput.addEventListener('input', passwordValidate);
