@@ -15,7 +15,7 @@ Please see https://elesian.github.io/nc-login-form-clone/ for a live demo.
 ### Instructions
 
 1. Clone the repository locally using `git clone https://github.com/elesian/nc-login-form-clone.git`.
-2. The game can be ran using a local server. If you are using visual studio code, this can easily be achieved by installing the live server extension.
+2. The program can be ran using a local server. If you are using visual studio code, this can easily be achieved by installing the live server extension.
 
 ## Features 
 
